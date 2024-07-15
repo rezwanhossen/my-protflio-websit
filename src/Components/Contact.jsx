@@ -3,6 +3,9 @@ import "../App.css";
 import { FiSend } from "react-icons/fi";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
+import { FaRegArrowAltCircleUp } from "react-icons/fa";
 
 const Contact = () => {
   const form = useRef();
@@ -14,9 +17,11 @@ const Contact = () => {
       })
       .then(
         () => {
+          toast.success("email send sucessfully!");
           console.log("SUCCESS!");
         },
         (error) => {
+          toast.error(error.text);
           console.log("FAILED...", error.text);
         }
       );
@@ -78,6 +83,14 @@ const Contact = () => {
         <div className=" flex-1">
           <img className="w-full rounded-md" src={gig} alt="A cool GIF" />
         </div>
+      </div>
+      <div className="flex justify-center">
+        <a
+          href="#nav"
+          className="btn my-10   text-xl font-semibold btn-secondary bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600"
+        >
+          <FaRegArrowAltCircleUp />
+        </a>
       </div>
     </div>
   );

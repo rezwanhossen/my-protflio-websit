@@ -2,7 +2,7 @@ import rezwan from "../assets/rezwan.jpg";
 import { motion } from "framer-motion";
 import "./Css/About.css";
 import "../App.css";
-import cv from "../assets/rezwan.jpg";
+import cv from "../assets/myResume.pdf";
 import { Link } from "react-router-dom";
 import { FaDownload, FaFacebookF } from "react-icons/fa";
 import { GrLinkedin } from "react-icons/gr";
@@ -28,7 +28,7 @@ const About = () => {
     deleteSpeed: 40,
   });
   return (
-    <div className=" rounded-md py-8">
+    <div className=" rounded-md py-8" id="about">
       <div className="hero-content  gap-3 flex-col-reverse md:flex-row">
         <div className=" flex-1 space-y-2  text-center md:text-start p-8">
           <motion.h1
@@ -89,12 +89,12 @@ const About = () => {
             >
               Dounlod Resume <FaDownload />
             </a>
-            <Link
+            {/* <Link
               to="/contact"
               className=" btn  text-xl font-semibold  bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600"
             >
               Contact me
-            </Link>
+            </Link> */}
           </motion.div>
         </div>
         <div className=" flex-1 ">

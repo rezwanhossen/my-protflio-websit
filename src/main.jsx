@@ -7,7 +7,7 @@ import Education from "./Components/Education";
 import Root from "./Components/Root";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
-
+import { Toaster } from "react-hot-toast";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,6 +37,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <div className="w-[95%] mx-auto">
       <RouterProvider router={router} />
+      <Toaster />
     </div>
   </React.StrictMode>
 );
